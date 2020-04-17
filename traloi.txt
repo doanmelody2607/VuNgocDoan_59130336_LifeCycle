@@ -1,13 +1,17 @@
 Câu 4: Các phương thức vòng đời được gọi
 - Khi bấm vào nút Back:
-    onPause --> onStop --> onDestroy
+    onPause() --> onStop() --> onDestroy()
 - Sau đó mở lại ứng dụng:
-    onCreate --> onStart --> onResume
+    onCreate() --> onStart() --> onResume()
 
 Câu 5: Các phương thức vòng đời được gọi
 - Khi bấm vào nút Home:
-    onPause --> onStop
+    onPause() --> onStop()
 - Sau đó mở lại ứng dụng:
-    onCreate --> onStart --> onResume
+    onCreate() --> onStart() --> onResume()
 
 Câu 6:
+- onPause(): bởi vì tất cả những Ứng dụng khi được gọi về phương thức onDestroy() thì đều trải qua trạng thái onPause().
+	Do đó, phương thức onPause() thường được sử dụng để lưu lại thông tin trạng thái hiển thị của Ứng dụng (có thể khi Ứng dụng bị ngắt bất thường)
+- onResume(): khi phương thức onPause() được gọi, thông qua onResume() mà chúng ta có thể khôi phục lại 
+		trạng thái hiển thị của Ứng dụng khi mở lại Ứng dụng.
